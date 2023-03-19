@@ -1,0 +1,10 @@
+.add-attribute{
+    color:brown;
+    text-transform: capitalize;
+    background-color: aqua;
+    font-size: large;
+}
+
+.hide-el{
+    display: none;
+}

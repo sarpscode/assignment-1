@@ -1,0 +1,9 @@
+.hide-el{
+    display: none;
+}
+
+.shown-el{
+    background-color: red;
+    text-decoration: dotted;
+    text-transform: uppercase;
+}

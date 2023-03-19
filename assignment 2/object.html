@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="object.css">
+    <title>Element action</title>
+</head>
+<body>
+    <h1>Assignment on OPP</h1>
+    <div class="main-container">
+        <p class="p-one">this is one</p>
+        <p class="p-two">this is two</p>
+        <p class="p-three">this is three</p>
+        <p class="p-four"></p>
+    </div>
+
+    <script>
+        elementAction = (function(){
+            return{
+                el : null,
+                class: null,
+                appendEl: null,
+                text: null,
+                appendItem: null,
+                attribute: null,
+
+                initialize : function (selector){
+                this.el = document.createElement(selector)
+                },
+
+                addClass: function(classitem){
+                    this.class = this.el.classList.add(classitem)
+                
+                },
+
+                addText: function(textItem){
+                     this.text = document.createTextNode(textItem)
+
+                },
+
+                appendText : function(){
+                    this.el.appendChild(this.text)
+                },
+
+
+                hide: function(){
+                    this.el.classList.add("hide-el")
+                },
+
+                shown: function(){
+                    this.el.classList.add("shown-el")
+                },
+
+                getAttribute: function(){
+                    this.attribute = this.el.attributes
+                },
+
+                chooseAppend: function(appendSelector){
+                    this.appendEl = document.querySelector(appendSelector)
+                },
+                
+
+                appendList: function(){
+                   this.appendItem = this.appendEl.append(this.el)
+               },
+
+            }
+
+            
+
+        })()
+
+        elementAction.initialize("p")
+
+        elementAction.addClass("append-attribute")
+
+       elementAction.addText("I am append Attribute")
+
+       elementAction.chooseAppend(".main-container")
+
+       //elementAction.hide()
+
+       elementAction.shown()
+
+       elementAction.appendText()
+       
+       elementAction.appendList()
+
+       elementAction.getAttribute()
+
+        console.log(elementAction)
+
+    </script>
+</body>
+</html>
